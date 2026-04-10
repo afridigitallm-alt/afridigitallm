@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<!--
+╔══════════════════════════════════════════════════════════════════════╗
+║              AfriDigital LM — Production Website                    ║
+║                  Single-file · No dependencies                      ║
+║                                                                      ║
+║  HOW TO DEPLOY (GitHub Pages):                                       ║
+║  1. Create a GitHub repo named: afridigitallm.github.io              ║
+║  2. Upload this file as "index.html" to the root of the repo         ║
+║  3. Go to Settings → Pages → Source: main branch / root              ║
+║  4. Your site is live at https://afridigitallm.github.io             ║
+║                                                                      ║
+║  HOW TO DEPLOY (Netlify — fastest):                                  ║
+║  1. Go to https://app.netlify.com/drop                               ║
+║  2. Drag and drop this file                                          ║
+║  3. Site is instantly live with a free URL                           ║
+╚══════════════════════════════════════════════════════════════════════╝
+-->
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta -->
+  <title>AfriDigital LM — Agence Digitale à Douala | Sites Web, Google Business, Réseaux Sociaux</title>
+  <meta name="description" content="AfriDigital LM aide les entrepreneurs et PME à Douala à passer au digital : création de sites web, fiches professionnelles, Google Business, gestion des réseaux sociaux et Réceptionniste IA." />
+  <meta name="keywords" content="agence digitale Douala, création site web Cameroun, Google Business Profile, réseaux sociaux PME, AfriDigital LM" />
+  <meta name="author" content="AfriDigital LM" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://afridigitallm.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AfriDigital LM — Passez au digital, attirez plus de clients !" />
+  <meta property="og:description" content="Agence digitale à Douala aidant les entrepreneurs et PME camerounais à développer leur présence en ligne." />
+  <meta property="og:url" content="https://afridigitallm.github.io/" />
+  <meta property="og:locale" content="fr_CM" />
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "AfriDigital LM",
+    "description": "Agence digitale à Douala aidant les entrepreneurs et PME à développer leur présence en ligne.",
+    "url": "https://afridigitallm.github.io",
+    "telephone": "+237674742617",
+    "email": "afridigitallm@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Douala",
+      "addressRegion": "Région du Littoral",
+      "addressCountry": "CM"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 4.0511,
+      "longitude": 9.7679
+    },
+    "sameAs": [
+      "https://www.facebook.com/AfriDigitalLM",
+      "https://www.linkedin.com/company/afridigitallm",
+      "https://www.youtube.com/@AfriDigitalLM"
+    ],
+    "priceRange": "$$",
+    "openingHours": "Mo-Fr 08:00-18:00",
+    "areaServed": {
+      "@type": "City",
+      "name": "Douala"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES
+    ============================================================ */
+    :root {
+      --blue:        #1E3A8A;
+      --blue-mid:    #2952C4;
+      --blue-light:  #3B82F6;
+      --green:       #16A34A;
+      --orange:      #EA580C;
+      --gold:        #F59E0B;
+      --white:       #FFFFFF;
+      --off-white:   #F8FAFF;
+      --gray-100:    #F1F5F9;
+      --gray-300:    #CBD5E1;
+      --gray-500:    #64748B;
+      --gray-700:    #334155;
+      --dark:        #0D1B3E;
+      --text:        #1E293B;
+
+      --font-display: 'Syne', sans-serif;
+      --font-body:    'DM Sans', sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 40px;
+
+      --shadow-card: 0 4px 24px rgba(30,58,138,0.10);
+      --shadow-hover: 0 12px 40px rgba(30,58,138,0.18);
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ============================================================
+       UTILITY
+    ============================================================ */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 4vw, 2.6rem);
+      font-weight: 800;
+      color: var(--blue);
+      line-height: 1.2;
+    }
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--gray-500);
+      max-width: 560px;
+      margin-top: 12px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(234,88,12,0.35);
+    }
+    .btn-primary:hover {
+      background: #C2490A;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(234,88,12,0.45);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.6);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: var(--white);
+    }
+    .btn-green {
+      background: #25D366;
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+    }
+    .btn-green:hover {
+      background: #1DAA56;
+      transform: translateY(-2px);
+    }
+
+    /* ============================================================
+       LANGUAGE TOGGLE
+    ============================================================ */
+    .lang-bar {
+      background: var(--dark);
+      text-align: right;
+      padding: 6px 24px;
+    }
+    .lang-toggle {
+      display: inline-flex;
+      background: rgba(255,255,255,0.08);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .lang-toggle button {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.55);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .lang-toggle button.active {
+      background: var(--orange);
+      color: var(--white);
+      border-radius: 20px;
+    }
+
+    /* ============================================================
+       NAVIGATION
+    ============================================================ */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(30,58,138,0.08);
+      transition: box-shadow var(--transition);
+    }
+    .navbar.scrolled {
+      box-shadow: 0 2px 20px rgba(30,58,138,0.12);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-mark svg { width: 22px; height: 22px; fill: none; }
+    .logo-text {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--blue);
+      letter-spacing: -0.02em;
+    }
+    .logo-text span { color: var(--orange); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav-links a {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--gray-700);
+      transition: color var(--transition);
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--orange);
+      transition: width var(--transition);
+      border-radius: 2px;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--blue);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      background: var(--white);
+      border-top: 1px solid var(--gray-100);
+      padding: 16px 24px 24px;
+    }
+    .mobile-menu a {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--gray-700);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--gray-100);
+      transition: color var(--transition);
+    }
+    .mobile-menu a:hover { color: var(--blue); }
+    .mobile-menu .btn { margin-top: 16px; justify-content: center; }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      position: relative;
+      background: linear-gradient(130deg, var(--dark) 0%, #0C2461 55%, #1a3b8e 100%);
+      overflow: hidden;
+      padding: 100px 0 80px;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+    }
+    /* Geometric background shapes */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(234,88,12,0.18) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(22,163,74,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          rgba(255,255,255,0.02) 0px,
+          rgba(255,255,255,0.02) 1px,
+          transparent 1px,
+          transparent 60px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          rgba(255,255,255,0.02) 0px,
+          rgba(255,255,255,0.02) 1px,
+          transparent 1px,
+          transparent 60px
+        );
+    }
+    /* Cameroon flag accent stripe */
+    .flag-stripe {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 6px;
+      background: linear-gradient(to bottom, #007A5E 33.3%, #CE1126 33.3%, #CE1126 66.6%, #FCD116 66.6%);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50px;
+      padding: 6px 16px 6px 8px;
+      margin-bottom: 24px;
+      animation: fadeInUp 0.6s ease both;
+    }
+    .hero-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.3); }
+    }
+    .hero-badge span {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 0.05em;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      animation: fadeInUp 0.7s ease 0.1s both;
+    }
+    .hero-title .accent { color: var(--gold); }
+    .hero-title .accent-green { color: #4ADE80; }
+    .hero-desc {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.7;
+      max-width: 500px;
+      margin-bottom: 36px;
+      animation: fadeInUp 0.7s ease 0.2s both;
+    }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      animation: fadeInUp 0.7s ease 0.3s both;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 48px;
+      animation: fadeInUp 0.7s ease 0.4s both;
+    }
+    .stat {
+      text-align: left;
+    }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 4px;
+    }
+    /* Hero visual card */
+    .hero-visual {
+      animation: fadeInRight 0.8s ease 0.2s both;
+    }
+    .hero-card {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      position: relative;
+    }
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(245,158,11,0.3), rgba(22,163,74,0.15), transparent);
+      z-index: -1;
+    }
+    .service-preview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .service-preview-item {
+      background: rgba(255,255,255,0.07);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      transition: var(--transition);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .service-preview-item:hover {
+      background: rgba(255,255,255,0.12);
+      transform: translateY(-2px);
+    }
+    .service-preview-item .icon {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+    .service-preview-item .label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.8);
+      font-family: var(--font-display);
+    }
+    .hero-card-footer {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .whatsapp-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      border-radius: 50px;
+      padding: 8px 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: white;
+      font-family: var(--font-display);
+    }
+    .location-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+      font-family: var(--font-display);
+    }
+
+    /* ============================================================
+       SERVICES
+    ============================================================ */
+    .services {
+      padding: 96px 0;
+      background: var(--off-white);
+      position: relative;
+      overflow: hidden;
+    }
+    .services::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--green), var(--blue), var(--orange));
+    }
+    .services-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .services-header .section-sub {
+      margin: 12px auto 0;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      border: 1px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--blue-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(30,58,138,0.08);
+    }
+    .service-card:hover::after { transform: scaleX(1); }
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+    .service-icon.blue   { background: rgba(30,58,138,0.08); }
+    .service-icon.orange { background: rgba(234,88,12,0.08); }
+    .service-icon.green  { background: rgba(22,163,74,0.08); }
+    .service-icon.gold   { background: rgba(245,158,11,0.08); }
+    .service-icon.purple { background: rgba(124,58,237,0.08); }
+    .service-icon.teal   { background: rgba(20,184,166,0.08); }
+    .service-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .service-desc {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      line-height: 1.65;
+    }
+    .service-desc-en { display: none; }
+
+    /* ============================================================
+       WHY CHOOSE US
+    ============================================================ */
+    .why {
+      padding: 96px 0;
+      background: var(--white);
+    }
+    .why-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .why-visual {
+      position: relative;
+    }
+    .why-main-card {
+      background: linear-gradient(135deg, var(--blue) 0%, #0C2461 100%);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .why-main-card::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 200px;
+      height: 200px;
+      background: rgba(245,158,11,0.2);
+      border-radius: 50%;
+    }
+    .why-main-card::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: -40px;
+      width: 160px;
+      height: 160px;
+      background: rgba(22,163,74,0.15);
+      border-radius: 50%;
+    }
+    .why-quote {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1.4;
+      position: relative;
+      z-index: 2;
+    }
+    .why-quote .hi { color: var(--gold); }
+    .why-quote-sub {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      opacity: 0.75;
+      position: relative;
+      z-index: 2;
+    }
+    .why-floating-badge {
+      position: absolute;
+      bottom: -24px;
+      right: 32px;
+      background: var(--orange);
+      color: white;
+      border-radius: var(--radius-sm);
+      padding: 12px 20px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.85rem;
+      box-shadow: 0 8px 24px rgba(234,88,12,0.35);
+      z-index: 3;
+    }
+    .why-floating-badge .small {
+      font-size: 0.72rem;
+      font-weight: 400;
+      opacity: 0.85;
+    }
+    .why-content { }
+    .why-points {
+      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .why-point {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .why-point-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .why-point-text strong {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--blue);
+      margin-bottom: 4px;
+    }
+    .why-point-text p {
+      font-size: 0.88rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+    .payment-note {
+      margin-top: 32px;
+      background: linear-gradient(135deg, rgba(255,204,0,0.08), rgba(0,0,0,0.03));
+      border: 1px solid rgba(255,204,0,0.25);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.85rem;
+      color: var(--gray-700);
+    }
+    .payment-note .momo-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .payment-note strong { color: var(--text); }
+
+    /* ============================================================
+       PROCESS
+    ============================================================ */
+    .process {
+      padding: 80px 0;
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .process::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(234,88,12,0.12) 0%, transparent 70%);
+    }
+    .process-header { text-align: center; margin-bottom: 56px; }
+    .process-header .section-title { color: var(--white); }
+    .process-header .section-label { color: var(--gold); }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: calc(12.5% + 16px);
+      right: calc(12.5% + 16px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--blue-light), var(--green));
+    }
+    .process-step {
+      text-align: center;
+      position: relative;
+    }
+    .process-step-num {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), #F97316);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 4px 20px rgba(234,88,12,0.4);
+    }
+    .process-step-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .process-step-desc {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+    .contact {
+      padding: 96px 0;
+      background: var(--off-white);
+    }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .contact-info { }
+    .contact-channels {
+      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .contact-channel {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      box-shadow: 0 2px 12px rgba(30,58,138,0.06);
+      transition: var(--transition);
+      text-decoration: none;
+      color: var(--text);
+    }
+    .contact-channel:hover {
+      transform: translateX(4px);
+      box-shadow: 0 4px 20px rgba(30,58,138,0.12);
+    }
+    .channel-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .channel-icon.wa    { background: #25D36618; }
+    .channel-icon.fb    { background: #1877F218; }
+    .channel-icon.li    { background: #0A66C218; }
+    .channel-icon.yt    { background: #FF000018; }
+    .channel-icon.em    { background: rgba(30,58,138,0.08); }
+    .channel-info strong {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      margin-bottom: 2px;
+    }
+    .channel-info span {
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    /* Contact Form */
+    .contact-form-wrap {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-card);
+    }
+    .form-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--blue);
+      margin-bottom: 24px;
+    }
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gray-700);
+      margin-bottom: 6px;
+      font-family: var(--font-display);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--gray-300);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--blue-light);
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-submit { width: 100%; justify-content: center; padding: 15px; }
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--gray-500);
+      text-align: center;
+      margin-top: 12px;
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 24px;
+    }
+    .form-success .success-icon { font-size: 3rem; margin-bottom: 12px; }
+    .form-success p {
+      font-family: var(--font-display);
+      font-weight: 600;
+      color: var(--green);
+    }
+
+    /* ============================================================
+       MAP
+    ============================================================ */
+    .map-section {
+      height: 360px;
+      position: relative;
+      overflow: hidden;
+    }
+    .map-section iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: saturate(0.85) brightness(0.95);
+    }
+    .map-overlay-card {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+      max-width: 240px;
+    }
+    .map-overlay-card strong {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      color: var(--blue);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .map-overlay-card p {
+      font-size: 0.82rem;
+      color: var(--gray-500);
+    }
+    .map-overlay-card .map-pin {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: var(--orange);
+      font-weight: 600;
+      font-family: var(--font-display);
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.65);
+      padding: 56px 0 32px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand .logo-text { color: var(--white); font-size: 1.1rem; }
+    .footer-brand .logo-mark { background: linear-gradient(135deg, var(--orange), #F97316); }
+    .footer-brand p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-top: 16px;
+      max-width: 300px;
+    }
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .footer-social-link {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .footer-social-link:hover {
+      background: var(--orange);
+      transform: translateY(-2px);
+    }
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--white);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      transition: color var(--transition);
+    }
+    .footer-col ul a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p { font-size: 0.82rem; }
+    .footer-bottom .flag-colors {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+    .flag-colors span {
+      width: 18px;
+      height: 10px;
+      border-radius: 2px;
+    }
+
+    /* ============================================================
+       FLOATING WHATSAPP BUTTON
+    ============================================================ */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+    .wa-float-btn {
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 24px rgba(37,211,102,0.45);
+      transition: var(--transition);
+      text-decoration: none;
+      animation: waEntrance 1s ease 0.8s both;
+    }
+    @keyframes waEntrance {
+      from { transform: scale(0) rotate(-45deg); opacity: 0; }
+      to { transform: scale(1) rotate(0deg); opacity: 1; }
+    }
+    .wa-float-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 32px rgba(37,211,102,0.55);
+    }
+    .wa-float-btn svg { width: 30px; height: 30px; fill: white; }
+    .wa-float-tooltip {
+      background: var(--dark);
+      color: white;
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 8px;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateX(10px);
+      transition: var(--transition);
+      pointer-events: none;
+    }
+    .wa-float:hover .wa-float-tooltip {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .wa-pulse {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: #25D366;
+      animation: waPulse 2.5s infinite;
+      z-index: -1;
+    }
+    @keyframes waPulse {
+      0% { transform: scale(1); opacity: 0.6; }
+      100% { transform: scale(1.8); opacity: 0; }
+    }
+
+    /* ============================================================
+       ANIMATIONS
+    ============================================================ */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(32px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .process-steps::before { display: none; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .footer-inner .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: flex; }
+      .hero { padding: 72px 0 60px; min-height: auto; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
+      .hero-stats { gap: 20px; }
+      .why-inner { grid-template-columns: 1fr; gap: 40px; }
+      .why-visual { order: -1; }
+      .why-floating-badge { bottom: -16px; right: 16px; }
+      .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .hero-ctas { flex-direction: column; }
+      .btn { width: 100%; justify-content: center; }
+      .process-steps { grid-template-columns: 1fr; }
+      .map-overlay-card { max-width: 180px; }
+    }
+
+    /* ============================================================
+       ENGLISH MODE OVERRIDES
+    ============================================================ */
+    .en-only { display: none !important; }
+    body.english .fr-only { display: none !important; }
+    body.english .en-only { display: block !important; }
+    body.english .en-inline { display: inline !important; }
+    .en-inline { display: none; }
+    body.english .fr-inline { display: none; }
+    body.english .service-desc-en { display: block; }
+    body.english .service-desc-fr { display: none; }
+
+    /* ============================================================
+       BACK TO TOP
+    ============================================================ */
+    .back-to-top {
+      position: fixed;
+      bottom: 100px;
+      right: 28px;
+      z-index: 998;
+      width: 44px;
+      height: 44px;
+      background: var(--blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-card);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: var(--transition);
+      border: none;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .back-to-top:hover { background: var(--blue-mid); }
+    .back-to-top svg { fill: white; width: 18px; height: 18px; }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     LANGUAGE TOGGLE BAR
+============================================================ -->
+<div class="lang-bar">
+  <div class="lang-toggle">
+    <button class="active" id="btnFr" onclick="setLang('fr')">🇫🇷 FR</button>
+    <button id="btnEn" onclick="setLang('en')">🇬🇧 EN</button>
+  </div>
+</div>
+
+<!-- ============================================================
+     NAVIGATION
+============================================================ -->
+<header>
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <!-- Logo -->
+        <a href="#hero" class="logo" aria-label="AfriDigital LM - Accueil">
+          <div class="logo-mark">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" fill="white" opacity="0.9"/>
+              <path d="M2 17l10 5 10-5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <path d="M2 12l10 5 10-5" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            </svg>
+          </div>
+          <span class="logo-text">Afri<span>Digital</span> LM</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <ul class="nav-links" role="navigation" aria-label="Navigation principale">
+          <li><a href="#services" class="fr-inline">Services</a><a href="#services" class="en-inline">Services</a></li>
+          <li><a href="#why" class="fr-inline">Pourquoi nous</a><a href="#why" class="en-inline">Why Us</a></li>
+          <li><a href="#process" class="fr-inline">Notre Processus</a><a href="#process" class="en-inline">Our Process</a></li>
+          <li><a href="#contact" class="fr-inline">Contact</a><a href="#contact" class="en-inline">Contact</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="https://wa.me/237674742617?text=Bonjour%20AfriDigital%20LM%2C%20je%20voudrais%20en%20savoir%20plus%20sur%20vos%20services."
+             class="btn btn-primary" target="_blank" rel="noopener"
+             aria-label="Contactez-nous sur WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span class="fr-inline">Contactez-nous</span>
+            <span class="en-inline">Contact Us</span>
+          </a>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menu mobile">
+      <a href="#services" onclick="closeMobile()">
+        <span class="fr-inline">Services</span><span class="en-inline">Services</span>
+      </a>
+      <a href="#why" onclick="closeMobile()">
+        <span class="fr-inline">Pourquoi nous</span><span class="en-inline">Why Us</span>
+      </a>
+      <a href="#process" onclick="closeMobile()">
+        <span class="fr-inline">Notre Processus</span><span class="en-inline">Our Process</span>
+      </a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+      <a href="https://wa.me/237674742617" class="btn btn-green" target="_blank" rel="noopener">
+        📱 WhatsApp
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section class="hero" id="hero" role="banner">
+  <div class="hero-bg">
+    <div class="hero-pattern"></div>
+  </div>
+  <div class="flag-stripe" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero-inner">
+      <!-- Left: Text -->
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <span class="fr-inline">🇨🇲 Douala, Cameroun · Agence Digitale</span>
+          <span class="en-inline">🇨🇲 Douala, Cameroon · Digital Agency</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="fr-inline">Passez au <span class="accent">digital</span>, et attirez plus de <span class="accent-green">clients !</span></span>
+          <span class="en-inline">Go <span class="accent">digital</span>, attract more <span class="accent-green">clients!</span></span>
+        </h1>
+
+        <p class="hero-desc fr-inline">
+          Nous aidons les entrepreneurs et PME à développer leur présence en ligne et sur le web pour attirer plus de clients locaux.
+        </p>
+        <p class="hero-desc en-inline">
+          We help entrepreneurs and SMEs build their online presence to attract more local clients in Douala and across Cameroon.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="https://wa.me/237674742617?text=Bonjour%20AfriDigital%20LM%2C%20je%20voudrais%20en%20savoir%20plus%20sur%20vos%20services."
+             class="btn btn-primary"
+             target="_blank" rel="noopener"
+             aria-label="Contacter AfriDigital LM sur WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span class="fr-inline">Contactez-nous</span>
+            <span class="en-inline">Contact Us</span>
+          </a>
+          <a href="#services" class="btn btn-outline">
+            <span class="fr-inline">Voir nos services</span>
+            <span class="en-inline">View Our Services</span>
+            ↓
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">6+</div>
+            <div class="stat-label fr-inline">Services digitaux</div>
+            <div class="stat-label en-inline">Digital services</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">⚡</div>
+            <div class="stat-label fr-inline">Livraison rapide</div>
+            <div class="stat-label en-inline">Fast delivery</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">🤖</div>
+            <div class="stat-label fr-inline">IA intégrée</div>
+            <div class="stat-label en-inline">AI-powered</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Visual Card -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-card">
+          <div class="service-preview-grid">
+            <div class="service-preview-item">
+              <div class="icon">🌐</div>
+              <div class="label fr-inline">Site Web</div>
+              <div class="label en-inline">Website</div>
+            </div>
+            <div class="service-preview-item">
+              <div class="icon">📍</div>
+              <div class="label fr-inline">Google Business</div>
+              <div class="label en-inline">Google Business</div>
+            </div>
+            <div class="service-preview-item">
+              <div class="icon">📱</div>
+              <div class="label fr-inline">Réseaux Sociaux</div>
+              <div class="label en-inline">Social Media</div>
+            </div>
+            <div class="service-preview-item">
+              <div class="icon">🤖</div>
+              <div class="label fr-inline">Réceptionniste IA</div>
+              <div class="label en-inline">AI Receptionist</div>
+            </div>
+            <div class="service-preview-item">
+              <div class="icon">📄</div>
+              <div class="label fr-inline">CV Pro</div>
+              <div class="label en-inline">Pro CV</div>
+            </div>
+            <div class="service-preview-item">
+              <div class="icon">🗂️</div>
+              <div class="label fr-inline">Fiche Pro</div>
+              <div class="label en-inline">Pro Profile</div>
+            </div>
+          </div>
+          <div class="hero-card-footer">
+            <div class="whatsapp-pill">
+              📱 +237 674 742 617
+            </div>
+            <div class="location-pill">
+              📍 Douala, CM
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES
+============================================================ -->
+<section class="services" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="services-header reveal">
+      <span class="section-label fr-inline">Ce que nous faisons</span>
+      <span class="section-label en-inline">What We Do</span>
+      <h2 class="section-title" id="services-title">
+        <span class="fr-inline">Nos Services Digitaux</span>
+        <span class="en-inline">Our Digital Services</span>
+      </h2>
+      <p class="section-sub">
+        <span class="fr-inline">Des solutions modernes et personnalisées pour booster votre visibilité en ligne à Douala et partout au Cameroun.</span>
+        <span class="en-inline">Modern, tailored solutions to boost your online visibility in Douala and across Cameroon.</span>
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Service 1: Website -->
+      <article class="service-card reveal reveal-delay-1" aria-label="Création de sites web">
+        <div class="service-icon blue" aria-hidden="true">🌐</div>
+        <h3 class="service-title fr-inline">Création de Site Web Vitrine</h3>
+        <h3 class="service-title en-inline">Showcase Website Creation</h3>
+        <p class="service-desc service-desc-fr">
+          Création de sites web vitrine pour se démarquer sur le web et attirer plus de clients locaux. Design moderne, rapide et adapté aux mobiles.
+        </p>
+        <p class="service-desc service-desc-en">
+          Professional showcase websites that stand out and attract more local clients. Modern design, fast-loading and fully mobile-responsive.
+        </p>
+      </article>
+
+      <!-- Service 2: Professional Profile -->
+      <article class="service-card reveal reveal-delay-2" aria-label="Fiches professionnelles">
+        <div class="service-icon orange" aria-hidden="true">🗂️</div>
+        <h3 class="service-title fr-inline">Fiches Professionnelles</h3>
+        <h3 class="service-title en-inline">Professional Profiles</h3>
+        <p class="service-desc service-desc-fr">
+          Création de fiches professionnelles percutantes qui mettent en valeur votre activité, vos compétences et vos réalisations.
+        </p>
+        <p class="service-desc service-desc-en">
+          Striking professional profiles that showcase your business, skills, and achievements to the right audience.
+        </p>
+      </article>
+
+      <!-- Service 3: CV -->
+      <article class="service-card reveal reveal-delay-3" aria-label="CV professionnel">
+        <div class="service-icon green" aria-hidden="true">📄</div>
+        <h3 class="service-title fr-inline">CV Professionnel &amp; Optimisé</h3>
+        <h3 class="service-title en-inline">Professional &amp; Optimized CV</h3>
+        <p class="service-desc service-desc-fr">
+          Création de CV professionnel + optimisation en valeur vos compétences. Mise en page moderne qui attire l'attention des recruteurs.
+        </p>
+        <p class="service-desc service-desc-en">
+          Professional CV creation + skills optimization to make your experience shine. Modern layouts that grab recruiters' attention.
+        </p>
+      </article>
+
+      <!-- Service 4: Google Business -->
+      <article class="service-card reveal reveal-delay-4" aria-label="Google Business Profile">
+        <div class="service-icon gold" aria-hidden="true">📍</div>
+        <h3 class="service-title fr-inline">Google Business Profile</h3>
+        <h3 class="service-title en-inline">Google Business Profile</h3>
+        <p class="service-desc service-desc-fr">
+          Optimisation de votre Google Business Profile pour être visible sur Google Maps et dans les résultats de recherche locaux à Douala.
+        </p>
+        <p class="service-desc service-desc-en">
+          Optimize your Google Business Profile to appear on Google Maps and local search results in Douala and beyond.
+        </p>
+      </article>
+
+      <!-- Service 5: Social Media -->
+      <article class="service-card reveal reveal-delay-5" aria-label="Gestion des réseaux sociaux">
+        <div class="service-icon purple" aria-hidden="true">📱</div>
+        <h3 class="service-title fr-inline">Gestion des Réseaux Sociaux</h3>
+        <h3 class="service-title en-inline">Social Media Management</h3>
+        <p class="service-desc service-desc-fr">
+          Publication et gestion de vos pages Facebook, WhatsApp, LinkedIn et X (Twitter). Contenu régulier pour engager votre audience.
+        </p>
+        <p class="service-desc service-desc-en">
+          Post and manage your Facebook, WhatsApp, LinkedIn and X (Twitter) pages. Regular content to grow and engage your audience.
+        </p>
+      </article>
+
+      <!-- Service 6: AI Receptionist -->
+      <article class="service-card reveal reveal-delay-1" aria-label="Réceptionniste IA">
+        <div class="service-icon teal" aria-hidden="true">🤖</div>
+        <h3 class="service-title fr-inline">Réceptionniste IA Automatique</h3>
+        <h3 class="service-title en-inline">Automatic AI Receptionist</h3>
+        <p class="service-desc service-desc-fr">
+          Un assistant IA qui répond instantanément à vos clients 24h/24, 7j/7 — même quand vous dormez. Ne ratez plus aucun prospect.
+        </p>
+        <p class="service-desc service-desc-en">
+          An AI assistant that instantly responds to your clients 24/7 — even while you sleep. Never miss another lead again.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY CHOOSE US
+============================================================ -->
+<section class="why" id="why" aria-labelledby="why-title">
+  <div class="container">
+    <div class="why-inner">
+      <!-- Visual -->
+      <div class="why-visual reveal">
+        <div class="why-main-card">
+          <p class="why-quote">
+            <span class="fr-inline">Services <span class="hi">modernes</span>, personnalisés et à tarifs <span class="hi">avantageux.</span></span>
+            <span class="en-inline">Modern, <span class="hi">personalized</span> services at <span class="hi">affordable</span> rates.</span>
+          </p>
+          <p class="why-quote-sub fr-inline">Un accompagnement rapide et efficace pour votre transformation digitale.</p>
+          <p class="why-quote-sub en-inline">Fast, effective support for your digital transformation journey.</p>
+        </div>
+        <div class="why-floating-badge">
+          <div class="fr-inline">💡 Livraison Express</div>
+          <div class="en-inline">💡 Express Delivery</div>
+          <div class="small fr-inline">Résultats rapides garantis</div>
+          <div class="small en-inline">Fast results guaranteed</div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="why-content reveal">
+        <span class="section-label fr-inline">Pourquoi nous choisir</span>
+        <span class="section-label en-inline">Why Choose Us</span>
+        <h2 class="section-title" id="why-title">
+          <span class="fr-inline">Votre partenaire digital de confiance à Douala</span>
+          <span class="en-inline">Your trusted digital partner in Douala</span>
+        </h2>
+
+        <div class="why-points">
+          <div class="why-point">
+            <div class="why-point-icon blue" style="background:rgba(30,58,138,0.08);">💰</div>
+            <div class="why-point-text">
+              <strong>
+                <span class="fr-inline">Tarifs avantageux & accessibles</span>
+                <span class="en-inline">Affordable & accessible pricing</span>
+              </strong>
+              <p>
+                <span class="fr-inline">Des prix adaptés à la réalité des PME camerounaises. Paiement accepté via MTN MoMo, Orange Money et virements.</span>
+                <span class="en-inline">Pricing adapted to Cameroonian SMEs. Payment accepted via MTN MoMo, Orange Money, and transfers.</span>
+              </p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon" style="background:rgba(22,163,74,0.08);">⚡</div>
+            <div class="why-point-text">
+              <strong>
+                <span class="fr-inline">Accompagnement rapide et efficace</span>
+                <span class="en-inline">Fast and effective support</span>
+              </strong>
+              <p>
+                <span class="fr-inline">Nous travaillons vite et bien. Vos projets livrés dans les délais, avec un suivi personnalisé à chaque étape.</span>
+                <span class="en-inline">We work fast and well. Projects delivered on time with personalized follow-up every step of the way.</span>
+              </p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon" style="background:rgba(234,88,12,0.08);">🎯</div>
+            <div class="why-point-text">
+              <strong>
+                <span class="fr-inline">Solutions personnalisées</span>
+                <span class="en-inline">Personalized solutions</span>
+              </strong>
+              <p>
+                <span class="fr-inline">Chaque entreprise est unique. Nous créons des solutions sur-mesure qui correspondent à votre secteur et vos objectifs.</span>
+                <span class="en-inline">Every business is unique. We build tailored solutions that fit your industry and your specific goals.</span>
+              </p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon" style="background:rgba(245,158,11,0.08);">🌍</div>
+            <div class="why-point-text">
+              <strong>
+                <span class="fr-inline">Expertise locale, vision globale</span>
+                <span class="en-inline">Local expertise, global vision</span>
+              </strong>
+              <p>
+                <span class="fr-inline">Basés à Douala, nous connaissons le marché camerounais. Nous utilisons les meilleures technologies mondiales pour vous.</span>
+                <span class="en-inline">Based in Douala, we know the Cameroonian market and use the world's best technologies for your business.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MTN MoMo note -->
+        <div class="payment-note" aria-label="Modes de paiement acceptés">
+          <span class="momo-icon">📲</span>
+          <div>
+            <strong class="fr-inline">Paiement facilité</strong>
+            <strong class="en-inline">Easy Payment</strong><br>
+            <span class="fr-inline">MTN MoMo · Orange Money · Virement bancaire</span>
+            <span class="en-inline">MTN MoMo · Orange Money · Bank transfer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROCESS
+============================================================ -->
+<section class="process" id="process" aria-labelledby="process-title">
+  <div class="container">
+    <div class="process-header reveal">
+      <span class="section-label fr-inline">Comment ça marche</span>
+      <span class="section-label en-inline">How It Works</span>
+      <h2 class="section-title" id="process-title">
+        <span class="fr-inline">Notre Processus Simple</span>
+        <span class="en-inline">Our Simple Process</span>
+      </h2>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step reveal reveal-delay-1">
+        <div class="process-step-num">1</div>
+        <h3 class="process-step-title fr-inline">Consultation</h3>
+        <h3 class="process-step-title en-inline">Consultation</h3>
+        <p class="process-step-desc fr-inline">On discute de vos besoins via WhatsApp ou en personne à Douala.</p>
+        <p class="process-step-desc en-inline">We discuss your needs via WhatsApp or in person in Douala.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="process-step-num">2</div>
+        <h3 class="process-step-title fr-inline">Devis</h3>
+        <h3 class="process-step-title en-inline">Quote</h3>
+        <p class="process-step-desc fr-inline">Vous recevez un devis clair et détaillé, sans mauvaises surprises.</p>
+        <p class="process-step-desc en-inline">You receive a clear, detailed quote with no hidden fees.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="process-step-num">3</div>
+        <h3 class="process-step-title fr-inline">Réalisation</h3>
+        <h3 class="process-step-title en-inline">Execution</h3>
+        <p class="process-step-desc fr-inline">Notre équipe crée votre solution digitale rapidement et efficacement.</p>
+        <p class="process-step-desc en-inline">Our team builds your digital solution quickly and professionally.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-4">
+        <div class="process-step-num">4</div>
+        <h3 class="process-step-title fr-inline">Livraison &amp; Suivi</h3>
+        <h3 class="process-step-title en-inline">Delivery &amp; Support</h3>
+        <p class="process-step-desc fr-inline">Livraison finale + accompagnement post-projet pour votre succès.</p>
+        <p class="process-step-desc en-inline">Final delivery + ongoing support to ensure your success.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+============================================================ -->
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="contact-inner">
+      <!-- Info -->
+      <div class="contact-info reveal">
+        <span class="section-label fr-inline">Parlons de votre projet</span>
+        <span class="section-label en-inline">Let's Talk About Your Project</span>
+        <h2 class="section-title" id="contact-title">
+          <span class="fr-inline">Contactez AfriDigital LM</span>
+          <span class="en-inline">Contact AfriDigital LM</span>
+        </h2>
+        <p class="section-sub fr-inline">Prêt à passer au digital ? Contactez-nous dès maintenant. Réponse rapide garantie !</p>
+        <p class="section-sub en-inline">Ready to go digital? Reach out now. Fast response guaranteed!</p>
+
+        <div class="contact-channels" role="list">
+          <a href="https://wa.me/237674742617?text=Bonjour%20AfriDigital%20LM%2C%20je%20voudrais%20en%20savoir%20plus%20sur%20vos%20services."
+             class="contact-channel" target="_blank" rel="noopener" role="listitem"
+             aria-label="Contacter sur WhatsApp">
+            <div class="channel-icon wa">📱</div>
+            <div class="channel-info">
+              <strong>WhatsApp</strong>
+              <span>+237 674 742 617</span>
+            </div>
+          </a>
+
+          <a href="https://www.facebook.com/AfriDigitalLM"
+             class="contact-channel" target="_blank" rel="noopener" role="listitem"
+             aria-label="Page Facebook AfriDigital LM">
+            <div class="channel-icon fb">🔵</div>
+            <div class="channel-info">
+              <strong>Facebook</strong>
+              <span>AfriDigital LM</span>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/company/afridigitallm"
+             class="contact-channel" target="_blank" rel="noopener" role="listitem"
+             aria-label="LinkedIn AfriDigital LM">
+            <div class="channel-icon li">💼</div>
+            <div class="channel-info">
+              <strong>LinkedIn</strong>
+              <span>AfriDigital LM</span>
+            </div>
+          </a>
+
+          <a href="https://www.youtube.com/@AfriDigitalLM"
+             class="contact-channel" target="_blank" rel="noopener" role="listitem"
+             aria-label="YouTube AfriDigital LM">
+            <div class="channel-icon yt">▶️</div>
+            <div class="channel-info">
+              <strong>YouTube</strong>
+              <span>AfriDigital LM</span>
+            </div>
+          </a>
+
+          <a href="mailto:afridigitallm@gmail.com"
+             class="contact-channel" role="listitem"
+             aria-label="Envoyer un email à AfriDigital LM">
+            <div class="channel-icon em">✉️</div>
+            <div class="channel-info">
+              <strong>Email</strong>
+              <span>afridigitallm@gmail.com</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="contact-form-wrap reveal reveal-delay-2">
+        <h3 class="form-title fr-inline">📩 Envoyez-nous un message</h3>
+        <h3 class="form-title en-inline">📩 Send Us a Message</h3>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">
+                <span class="fr-inline">Prénom</span>
+                <span class="en-inline">First Name</span>
+              </label>
+              <input type="text" id="firstName" name="firstName" required
+                     placeholder="Jean" autocomplete="given-name" />
+            </div>
+            <div class="form-group">
+              <label for="lastName">
+                <span class="fr-inline">Nom</span>
+                <span class="en-inline">Last Name</span>
+              </label>
+              <input type="text" id="lastName" name="lastName" required
+                     placeholder="Kamga" autocomplete="family-name" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">
+              <span class="fr-inline">Téléphone / WhatsApp</span>
+              <span class="en-inline">Phone / WhatsApp</span>
+            </label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="+237 6XX XXX XXX" autocomplete="tel" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"
+                   placeholder="votre@email.com" autocomplete="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="service">
+              <span class="fr-inline">Service qui vous intéresse</span>
+              <span class="en-inline">Service of Interest</span>
+            </label>
+            <select id="service" name="service">
+              <option value="" class="fr-inline">-- Choisissez un service --</option>
+              <option value="website">🌐 Création de site web</option>
+              <option value="fiche">🗂️ Fiche professionnelle</option>
+              <option value="cv">📄 CV professionnel</option>
+              <option value="google">📍 Google Business Profile</option>
+              <option value="social">📱 Gestion réseaux sociaux</option>
+              <option value="ai">🤖 Réceptionniste IA</option>
+              <option value="other" class="fr-inline">Autre</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">
+              <span class="fr-inline">Votre message</span>
+              <span class="en-inline">Your Message</span>
+            </label>
+            <textarea id="message" name="message"
+                      placeholder="Décrivez votre projet ou votre besoin..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit">
+            <span class="fr-inline">Envoyer le message ✉️</span>
+            <span class="en-inline">Send Message ✉️</span>
+          </button>
+
+          <p class="form-note fr-inline">
+            🔒 Vos données sont confidentielles. Réponse sous 24h.
+          </p>
+          <p class="form-note en-inline">
+            🔒 Your data is private. Response within 24 hours.
+          </p>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">✅</div>
+          <p class="fr-inline">Message envoyé ! Nous vous répondrons bientôt via WhatsApp ou email.</p>
+          <p class="en-inline">Message sent! We'll get back to you soon via WhatsApp or email.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MAP EMBED — Douala, Cameroon
+============================================================ -->
+<div class="map-section" aria-label="Localisation AfriDigital LM à Douala">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127560.98839958638!2d9.6795!3d4.0510!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1061128be2e1fe6d%3A0x3f26b8b7c0b4abcc!2sDouala%2C%20Cameroun!5e0!3m2!1sfr!2scm!4v1710000000000"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="AfriDigital LM — Localisation à Douala, Cameroun"
+    aria-label="Carte Google Maps de Douala, Cameroun">
+  </iframe>
+  <div class="map-overlay-card">
+    <strong>AfriDigital LM</strong>
+    <p>Douala, Région du Littoral</p>
+    <p>Cameroun 🇨🇲</p>
+    <div class="map-pin">📍 Notre localisation</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="#hero" class="logo" aria-label="AfriDigital LM">
+          <div class="logo-mark">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" fill="white" opacity="0.9"/>
+              <path d="M2 17l10 5 10-5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <path d="M2 12l10 5 10-5" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            </svg>
+          </div>
+          <span class="logo-text">Afri<span>Digital</span> LM</span>
+        </a>
+        <p>
+          <span class="fr-inline">Votre partenaire digital à Douala. Nous aidons les entrepreneurs et PME à développer leur présence en ligne pour attirer plus de clients.</span>
+          <span class="en-inline">Your digital partner in Douala. We help entrepreneurs and SMEs grow their online presence to attract more clients.</span>
+        </p>
+        <div class="footer-socials" aria-label="Réseaux sociaux">
+          <a href="https://wa.me/237674742617" class="footer-social-link" target="_blank" rel="noopener" aria-label="WhatsApp">📱</a>
+          <a href="https://www.facebook.com/AfriDigitalLM" class="footer-social-link" target="_blank" rel="noopener" aria-label="Facebook">🔵</a>
+          <a href="https://www.linkedin.com/company/afridigitallm" class="footer-social-link" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>
+          <a href="https://www.youtube.com/@AfriDigitalLM" class="footer-social-link" target="_blank" rel="noopener" aria-label="YouTube">▶️</a>
+          <a href="mailto:afridigitallm@gmail.com" class="footer-social-link" aria-label="Email">✉️</a>
+        </div>
+      </div>
+
+      <!-- Services Links -->
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">🌐 <span class="fr-inline">Site Web</span><span class="en-inline">Website</span></a></li>
+          <li><a href="#services">🗂️ <span class="fr-inline">Fiche Pro</span><span class="en-inline">Pro Profile</span></a></li>
+          <li><a href="#services">📄 CV Pro</a></li>
+          <li><a href="#services">📍 Google Business</a></li>
+          <li><a href="#services">📱 <span class="fr-inline">Réseaux Sociaux</span><span class="en-inline">Social Media</span></a></li>
+          <li><a href="#services">🤖 <span class="fr-inline">Réceptionniste IA</span><span class="en-inline">AI Receptionist</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Links -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/237674742617" target="_blank" rel="noopener">+237 674 742 617</a></li>
+          <li><a href="mailto:afridigitallm@gmail.com">afridigitallm@gmail.com</a></li>
+          <li><a href="#contact">
+            <span class="fr-inline">📍 Douala, Littoral, Cameroun</span>
+            <span class="en-inline">📍 Douala, Littoral, Cameroon</span>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> AfriDigital LM. <span class="fr-inline">Tous droits réservés.</span><span class="en-inline">All rights reserved.</span></p>
+      <div class="flag-colors" aria-label="Drapeau du Cameroun">
+        <span style="background:#007A5E;"></span>
+        <span style="background:#CE1126;"></span>
+        <span style="background:#FCD116;"></span>
+        <span style="font-size:0.8rem; color:rgba(255,255,255,0.4); margin-left:4px;">🇨🇲 <span class="fr-inline">Fait avec ❤️ au Cameroun</span><span class="en-inline">Made with ❤️ in Cameroon</span></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     FLOATING WHATSAPP BUTTON
+============================================================ -->
+<div class="wa-float" role="complementary" aria-label="Contact WhatsApp rapide">
+  <div class="wa-float-tooltip fr-inline">Écrivez-nous sur WhatsApp !</div>
+  <div class="wa-float-tooltip en-inline">Message us on WhatsApp!</div>
+  <a href="https://wa.me/237674742617?text=Bonjour%20AfriDigital%20LM%2C%20je%20voudrais%20en%20savoir%20plus%20sur%20vos%20services."
+     class="wa-float-btn"
+     target="_blank"
+     rel="noopener"
+     aria-label="Contacter AfriDigital LM sur WhatsApp">
+    <div class="wa-pulse"></div>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5m-7 7 7-7 7 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+</button>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+  'use strict';
+
+  // ── Year ──────────────────────────────────────────────────────
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ── Language Toggle ───────────────────────────────────────────
+  function setLang(lang) {
+    const body = document.body;
+    const btnFr = document.getElementById('btnFr');
+    const btnEn = document.getElementById('btnEn');
+    if (lang === 'en') {
+      body.classList.add('english');
+      btnEn.classList.add('active');
+      btnFr.classList.remove('active');
+      document.documentElement.lang = 'en';
+      localStorage.setItem('afridigital-lang', 'en');
+    } else {
+      body.classList.remove('english');
+      btnFr.classList.add('active');
+      btnEn.classList.remove('active');
+      document.documentElement.lang = 'fr';
+      localStorage.setItem('afridigital-lang', 'fr');
+    }
+  }
+
+  // Restore saved language
+  (function() {
+    const saved = localStorage.getItem('afridigital-lang');
+    if (saved === 'en') setLang('en');
+  })();
+
+  // ── Navbar Scroll Effect ──────────────────────────────────────
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 40) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  // ── Mobile Menu ───────────────────────────────────────────────
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  let menuOpen = false;
+
+  hamburger.addEventListener('click', function() {
+    menuOpen = !menuOpen;
+    hamburger.classList.toggle('open', menuOpen);
+    mobileMenu.style.display = menuOpen ? 'flex' : 'none';
+    hamburger.setAttribute('aria-expanded', menuOpen);
+  });
+
+  function closeMobile() {
+    menuOpen = false;
+    hamburger.classList.remove('open');
+    mobileMenu.style.display = 'none';
+    hamburger.setAttribute('aria-expanded', false);
+  }
+
+  // ── Scroll Reveal ─────────────────────────────────────────────
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach(function(el) { revealObserver.observe(el); });
+
+  // ── Back to Top ───────────────────────────────────────────────
+  const backBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) {
+      backBtn.classList.add('visible');
+    } else {
+      backBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  backBtn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ── Contact Form ──────────────────────────────────────────────
+  const form = document.getElementById('contactForm');
+  const formSuccess = document.getElementById('formSuccess');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName  = document.getElementById('lastName').value.trim();
+    const phone     = document.getElementById('phone').value.trim();
+    const email     = document.getElementById('email').value.trim();
+    const service   = document.getElementById('service').value;
+    const message   = document.getElementById('message').value.trim();
+
+    if (!firstName || !lastName) {
+      alert(document.body.classList.contains('english')
+        ? 'Please enter your first and last name.'
+        : 'Veuillez entrer votre prénom et nom.');
+      return;
+    }
+
+    // Build WhatsApp message
+    const serviceLabels = {
+      website: 'Création de site web',
+      fiche:   'Fiche professionnelle',
+      cv:      'CV professionnel',
+      google:  'Google Business Profile',
+      social:  'Gestion réseaux sociaux',
+      ai:      'Réceptionniste IA',
+      other:   'Autre'
+    };
+    const serviceLabel = serviceLabels[service] || service || 'Non précisé';
+    const waText = encodeURIComponent(
+      `Bonjour AfriDigital LM ! Je m'appelle ${firstName} ${lastName}.\n` +
+      `📞 Contact: ${phone || email || 'non précisé'}\n` +
+      `🎯 Service: ${serviceLabel}\n` +
+      `💬 Message: ${message || 'Je voudrais en savoir plus.'}`
+    );
+
+    // Show success & redirect to WhatsApp
+    form.style.display = 'none';
+    formSuccess.style.display = 'block';
+
+    setTimeout(function() {
+      window.open(`https://wa.me/237674742617?text=${waText}`, '_blank');
+    }, 800);
+  });
+
+  // ── Smooth scroll for anchor links ───────────────────────────
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = navbar.offsetHeight + 8;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ── Active nav link on scroll ─────────────────────────────────
+  const sections = ['hero', 'services', 'why', 'process', 'contact'];
+  const navAnchors = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', function() {
+    let current = '';
+    sections.forEach(function(id) {
+      const el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - 120) {
+        current = id;
+      }
+    });
+    navAnchors.forEach(function(a) {
+      const href = a.getAttribute('href').replace('#', '');
+      a.style.color = href === current ? 'var(--blue)' : '';
+    });
+  }, { passive: true });
+</script>
+
+</body>
+</html>
